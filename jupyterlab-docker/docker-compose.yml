@@ -4,9 +4,8 @@ services:
     image: jupyter/datascience-notebook
     ports:
       - "8888:8888"
-    enviroment:
+    environment:
       - JUPYTER_ENABLE_LAB=yes
     volumes:
       - ./work:/home/jovyan/work
     command: start-notebook.sh --NotebookApp.token=''
-    
