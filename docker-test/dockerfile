@@ -1,7 +1,11 @@
 FROM python:3
 
-LABEL maintainer='naonao708@outlook.com'
-LABEL version='1.0'
-LABEL description='シンプルなPythonイメージ'
+WORKDIR /tmp/mydir
 
-WORKDIR /tmp/mudir
+COPY requirements.txt ${PWD}
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+ARG wdir 
+
+WORKDIR $wdir
