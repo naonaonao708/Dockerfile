@@ -1,0 +1,7 @@
+FROM python:3
+
+LABEL maintainer='naonao708@outlook.com'
+LABEL version='1.0'
+LABEL description='シンプルなPythonイメージ'
+
+WORKDIR /tmp/mudir
