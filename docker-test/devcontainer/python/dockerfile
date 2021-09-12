@@ -1,11 +1,7 @@
 FROM python:3
 
-WORKDIR /tmp/mydir
+WORKDIR /tmp/work 
 
 COPY requirements.txt ${PWD}
 
 RUN pip install --no-cache-dir -r requirements.txt
-
-ARG wdir 
-
-WORKDIR $wdir
