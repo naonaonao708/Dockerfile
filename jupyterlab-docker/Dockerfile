@@ -14,8 +14,9 @@ RUN pip3 install --upgrade pip && \
 RUN pip3 install --upgrade --no-cache-dir \
     jupyterlab \
     jupyterlab-kite \
-    jupyterlab-horizon-theme \
     jupyterlab_code_formatter \
     && rm -rf ~/.cache/pip
+
+RUN jupyter labextension install @mohirio/jupyterlab-horizon-theme
 
 WORKDIR /home/work
