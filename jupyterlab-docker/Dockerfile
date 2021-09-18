@@ -9,6 +9,7 @@ COPY requirements.txt .
 
 RUN pip3 install --upgrade pip && \
     pip3 install --no-cache-dir -r requirements.txt \
+    jupyterlab-horizon-theme
     && rm -rf ~/.cache/pip
 
 RUN pip3 install --upgrade --no-cache-dir \
@@ -16,7 +17,5 @@ RUN pip3 install --upgrade --no-cache-dir \
     jupyterlab-kite \
     jupyterlab_code_formatter \
     && rm -rf ~/.cache/pip
-
-RUN jupyter labextension install @mohirio/jupyterlab-horizon-theme
 
 WORKDIR /home/work
