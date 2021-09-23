@@ -8,6 +8,6 @@ services:
       - JUPYTER_ENABLE_LAB=yes
     volumes:
       - type: bind
-        source: "."
+        source: "./work"
         target: "/work"
     command: start-notebook.sh --NotebookApp.token=''
