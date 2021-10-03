@@ -15,6 +15,7 @@ RUN rm -rf ~/.cache/pip
 RUN pip3 install --upgrade --no-cache-dir \
     jupyterlab \
     jupyterlab-kite \
-    jupyterlab_code_formatter 
+    jupyterlab_code_formatter
 
-WORKDIR /home/work
+WORKDIR /src
+COPY /src /src 

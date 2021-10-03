@@ -6,6 +6,7 @@ services:
       - "8888:8888"
     environment:
       - JUPYTER_ENABLE_LAB=yes
+    tty: true
     volumes:
-      - "./work:/home/work"
+      - ./src:/src
     command: start-notebook.sh --NotebookApp.token=''
